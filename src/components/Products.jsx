@@ -1,35 +1,34 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Product from './Product'
+import Women from './Women'
+ 
+import GenderContext from '../store/GenderContext'
+import Men from './Men'
 
 function Products() {
+
+    let {gender,setGender}=useContext(GenderContext)
+
+    useEffect(()=>{
+
+    },[gender])
     return (
-        <div className='max-w-screen h-auto flex gap-2 my-9'>
-            <div className='h-auto w-1/4  '>
-                <div className='border-gray-500 p-7 border-[1px] border-solid rounded-xl max-w-screen h-auto'>
-                <h1 className='text-xl font-semibold text-gray-500 uppercase'>Categories</h1>
-                  <ul className='text-black font-semibold mt-3 space-y-2'>
-                    <li>For Men's</li>
-                    <li>For Women's</li>
-                  </ul>
+        <div className='max-w-screen h-auto my-9'>
 
-                </div>
-
-            </div>
-            <div className='h-auto w-3/4 border-gray-500 border-[1px] p-4 border-solid rounded-xl'>
-                <div className='grid grid-cols-3 gap-4 gap-y-7'>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
+            <ul className='flex justify-center items-center font-bold  my-7 space-x-16'>
+                <li onClick={()=>setGender("women")} className={`uppercase cursor-pointer hover:text-gray-400 duration-300 ease-in-out transition-all`}>Women's</li>
+                <li onClick={()=>setGender("men")} className={`uppercase cursor-pointer hover:text-gray-400 duration-300 ease-in-out transition-all `}>Men's</li>
+                
+            </ul>
+           
+            <div className='h-auto max-w-screen  bg-slate-100  p-7  rounded-xl'>
+                 
+                    {gender==="women"?<Women/>:
+                    <Men/>}
                     
                      
 
-                </div>
+               
             </div>
 
         </div>

@@ -11,21 +11,27 @@ function Navbar() {
       <input
         type="text"
         placeholder="Search"
-        className="text-lg border-gray-400 border-2 py-1 rounded-lg pl-2"
+        className="text-lg hidden lg:block border-gray-400 border-2 py-1 rounded-lg pl-2"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
    
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-5xl font-semibold">Perfumes</h1>
-        <h1 className='uppercase font-semibold'>online store</h1>
+      <div  className="flex flex-col items-center justify-center cursor-pointer hover:text-gray-400 duration-300 ease-in-out transition-all">
+        <h1 className="md:text-5xl  text-4xl font-semibold">Perfumes</h1>
+        <h1 className='uppercase font-semibold text-sm'>online store</h1>
+        
       </div>
+      
 
  
-      <div className="cursor-pointer animated w-[50px] h-[50px] hover:shadow-xl rounded-full text-green-700 ml-2">
+      <div className="cursor-pointer animated w-[50px] h-[50px] hover:shadow-xl rounded-full text-green-700 ml-8">
         <img className='w-full h-full object-cover' src={whatsapp} alt="" />
       </div>
+
+    
+
+      
     </div>
   );
 }

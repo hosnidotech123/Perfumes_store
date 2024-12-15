@@ -19,3 +19,13 @@
      
     100%{transform: translateY(0px)}
   }
+
+
+.products{
+    animation: opa 1.7s ease-in-out ;
+}
+
+@keyframes opa {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
