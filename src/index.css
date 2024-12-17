@@ -4,7 +4,7 @@
 
 
 .animated{
-    animation: mymove 1.2s ease-in-out infinite;
+    animation: mymove 1.2s ease-in infinite;
 }
 
 
@@ -22,7 +22,7 @@
 
 
 .products{
-    animation: opa 1.7s ease-in-out ;
+    animation: opa 1.7s ease-in ;
 }
 
 @keyframes opa {

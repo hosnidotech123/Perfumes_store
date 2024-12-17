@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 
 
-let GenderContext=createContext("women")
+let GenderContext=createContext(null)
 
 
 export default GenderContext
